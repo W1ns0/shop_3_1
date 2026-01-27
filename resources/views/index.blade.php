@@ -23,6 +23,7 @@
     </nav>
     <h1 class="d-flex justify-content-center pt-3">Goods</h1>
 </header>
+
 <main>
     <section class="container">
         <article class="card my-3">
