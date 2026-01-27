@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="ru">
 <head>
@@ -6,10 +7,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Goods</title>
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-    <script defer src="assets/bootstrap/js/bootstrap.bundle.js"></script>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="{{asset('assets/img/favicon.png')}}" type="image/x-icon">
+    <script defer src="{{asset('assets/bootstrap/js/bootstrap.bundle.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('assets/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 </head>
 <body>
 <header>
@@ -23,69 +24,82 @@
     </nav>
     <h1 class="d-flex justify-content-center pt-3">Goods</h1>
 </header>
-
-
-
 <main>
-    <section class="container">
-        <article class="card my-3">
-            <div class="card-title bg-secondary bg-gradient p-3 text-light d-flex justify-content-between">
-                <h3>Good name</h3>
-                <a href="" title="Delete good" class="btn-danger py-1 px-2 justify-content-center text-decoration-none fs-4">&#x2620;</a>
-            </div>
-            <div class="card-body d-flex justify-content-between">
-                <div class="card-img">
-                    <img src="assets/img/default.jpg" alt="Название товара">
-                </div>
-                <div class="card-info">
-                    <p class="card-text text-black-50"><span class="text-dark">About: </span>Lorem ipsum dolor sit amet,
-                        consecter.</p>
-                    <p class="card-text text-danger d-flex justify-content-end">2 499.99 ₽</p>
-                </div>
-            </div>
-            <div class="card-footer d-flex justify-content-end">
-                <a href="good.html" class="btn btn-primary fs-3">More about</a>
-            </div>
-        </article>
-        <article class="card my-3">
-            <div class="card-title bg-secondary bg-gradient p-3 text-light d-flex justify-content-between">
-                <h3>Good name</h3>
-                <a href="" title="Delete good" class="btn-danger py-1 px-2 justify-content-center text-decoration-none fs-4">&#x2620;</a>
-            </div>
-            <div class="card-body d-flex justify-content-between">
-                <div class="card-img">
-                    <img src="assets/img/default.jpg" alt="Название товара">
-                </div>
-                <div class="card-info">
-                    <p class="card-text text-black-50"><span class="text-dark">About: </span>Lorem ipsum dolor sit amet,
-                        consecter.</p>
-                    <p class="card-text text-danger d-flex justify-content-end">3 599.99 ₽</p>
-                </div>
-            </div>
-            <div class="card-footer d-flex justify-content-end">
-                <a href="good.html" class="btn btn-primary fs-3">More about</a>
-            </div>
-        </article>
-        <article class="card my-3">
-            <div class="card-title bg-secondary bg-gradient p-3 text-light d-flex justify-content-between">
-                <h3>Good name</h3>
-                <a href="" title="Delete good" class="btn-danger py-1 px-2 justify-content-center text-decoration-none fs-4">&#x2620;</a>
-            </div>
-            <div class="card-body d-flex justify-content-between">
-                <div class="card-img">
-                    <img src="assets/img/default.jpg" alt="Название товара">
-                </div>
-                <div class="card-info">
-                    <p class="card-text text-black-50"><span class="text-dark">About: </span>Lorem ipsum dolor sit amet,
-                        consecter.</p>
-                    <p class="card-text text-danger d-flex justify-content-end">6 499.99 ₽</p>
-                </div>
-            </div>
-            <div class="card-footer d-flex justify-content-end">
-                <a href="good.html" class="btn btn-primary fs-3">More about</a>
-            </div>
-        </article>
-    </section>
+    <div class="container py-5">
+        <h1 class="mb-4">Categories</h1>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle fs-5">
+                <thead class="table-light">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Count</th>
+                    <th class="text-end">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Electronic</td>
+                    <td>Technic and electronic devices</td>
+                    <td>1 234</td>
+                    <td class="text-end">
+                        <div class="btn-group" role="group">
+                            <a href="category_view.html" type="button" class="btn btn-lg btn-outline-primary no-reverse">
+                                <img src="{{asset('assets/img/icons/eye.svg')}}" alt="eye" class="action-image">
+                            </a>
+                            <a href="add_category.html" type="button" class="btn btn-lg btn-outline-success no-reverse">
+                                <img src="{{asset('assets/img/icons/pencil.svg')}}" alt="eye" class="action-image">
+                            </a>
+                            <a href="" type="button" class="btn btn-lg btn-outline-danger no-reverse">
+                                <img src="{{asset('assets/img/icons/trash.svg')}}" alt="eye" class="action-image">
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Cloth</td>
+                    <td>Clothes and rags</td>
+                    <td>1 234</td>
+                    <td class="text-end">
+                        <div class="btn-group" role="group">
+                            <a href="category_view.html" type="button" class="btn btn-lg btn-outline-primary no-reverse">
+                                <img src="{{asset('assets/img/icons/eye.svg')}}" alt="eye" class="action-image">
+                            </a>
+                            <a href="add_category.html" type="button" class="btn btn-lg btn-outline-success no-reverse">
+                                <img src="{{asset('assets/img/icons/pencil.svg')}}" alt="eye" class="action-image">
+                            </a>
+                            <a href="" type="button" class="btn btn-lg btn-outline-danger no-reverse">
+                                <img src="{{asset('assets/img/icons/trash.svg')}}" alt="eye" class="action-image">
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Books</td>
+                    <td>Books and magazines</td>
+                    <td>1 234</td>
+                    <td class="text-end">
+                        <div class="btn-group" role="group">
+                            <a href="category_view.html" type="button" class="btn btn-lg btn-outline-primary no-reverse">
+                                <img src="{{asset('assets/img/icons/eye.svg')}}" alt="eye" class="action-image">
+                            </a>
+                            <a href="add_category.html" type="button" class="btn btn-lg btn-outline-success no-reverse">
+                                <img src="{{asset('assets/img/icons/pencil.svg')}}" alt="eye" class="action-image">
+                            </a>
+                            <a href="" type="button" class="btn btn-lg btn-outline-danger no-reverse">
+                                <img src="{{asset('assets/img/icons/trash.svg')}}" alt="eye" class="action-image">
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </main>
 </body>
 </html>
